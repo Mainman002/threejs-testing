@@ -1,0 +1,14 @@
+{
+  "name": "hello_threejs",
+  "version": "1.0.0",
+  "description": "Threejs app for testing performance.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Johnathan Mueller",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.147.0"
+  }
+}
