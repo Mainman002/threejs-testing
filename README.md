@@ -1,6 +1,8 @@
 # threejs-testing
 A simple project to test threejs performance + rendering.
 
+[Click To Run In Browser](https://mainman002.github.io/threejs-testing/)
+
 ### Required Apps
 * [Git](https://git-scm.com/downloads)
 * [Git LFS](https://git-lfs.github.com/)
