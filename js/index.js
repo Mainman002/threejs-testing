@@ -67,7 +67,8 @@ const camera = new THREE.PerspectiveCamera(
   NEAR,
   FAR
 )
-camera.position.z = 5; // Set camera position
+camera.position.z = 10; // Set camera position
+camera.position.y = 8; // Set camera position
 
 // Renderer
 let pixelRatio = window.devicePixelRatio
@@ -293,6 +294,54 @@ function create_gui() {
 }
 
 window.addEventListener('load', () => {
+
+    // Check if fullscreen is supported
+    const fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
+
+    if (fullscreenEnabled) {
+        const element = document.documentElement; // You can replace this with the specific element you want to make fullscreen
+
+        // Function to enter fullscreen mode
+        function enterFullscreen() {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) { // Firefox
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullScreen) { // Chrome and Safari
+                element.webkitRequestFullScreen();
+            }
+        }
+
+        // Function to exit fullscreen mode
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        // Toggle fullscreen mode
+        function toggleFullscreen() {
+            if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
+                exitFullscreen();
+            } else {
+                enterFullscreen();
+            }
+        }
+
+        // You can trigger fullscreen based on user interaction, for example, a button click
+        const fullscreenButton = document.getElementById('fullscreenButton'); // Replace with your button's ID
+
+        if (fullscreenButton) {
+            fullscreenButton.addEventListener('click', toggleFullscreen);
+        }
+    } else {
+        console.log("Fullscreen not supported on this device/browser.");
+    }
+
     canvas.width = resolutions[resolutions_index.value].w;
     canvas.height = resolutions[resolutions_index.value].h;
     set_size();

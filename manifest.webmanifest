@@ -1,0 +1,18 @@
+{
+    "name": "threejs-testing",
+    "short_name": "threejs-testing",
+    "description": "A simple project to test threejs performance + rendering",
+    "scope": "/threejs-testing/",
+    "start_url": "/threejs-testing/",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "orientation": "landscape",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "/threejs-testing/icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }

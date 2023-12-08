@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="color-scheme" content="light dark">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <title>Hello Threejs</title>
+    <link rel="canonical" href="https://mainman002.github.io/threejs-testing/">
+    <link rel="manifest" href="/threejs-testing/manifest.webmanifest" crossorigin="use-credentials">
     <link rel="stylesheet" href="css/main.css">
     <script type="module" src="js/index.js"></script>
 </head>
 <body>
     <canvas id="canvas" width="1024" height="768"></canvas>
+    <button id="fullscreenButton" style="user-select: none;">Fullscreen</button>
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register(
+            '/threejs-testing/sw.js',
+            { scope: '/threejs-testing/' }
+            )
+        }
+    </script>
 </body>
 </html>
