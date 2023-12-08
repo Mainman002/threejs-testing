@@ -10,7 +10,7 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "/threejs-testing/icon.png",
+        "src": "/threejs-testing/Icon.png",
         "type": "image/png",
         "sizes": "512x512"
       }
