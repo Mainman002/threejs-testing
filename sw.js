@@ -1,6 +1,6 @@
 const path = '/threejs-testing';
 const app_prefix = 'threejs-testing';
-const version = '0.0.01';
+const version = '0.0.02';
 const urls = [
   `${path}/`,
   `${path}/Icon.png`,
